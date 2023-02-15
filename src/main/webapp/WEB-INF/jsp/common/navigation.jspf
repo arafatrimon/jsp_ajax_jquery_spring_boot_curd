@@ -1,0 +1,34 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/list">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/form">Register Student</a>
+            </li>
+
+        </ul>
+
+
+            <p style="color: white" class="mr-2"> Welcome to <%= session.getAttribute("userName")%> </p>
+
+
+
+        <form class="form-inline my-2 my-lg-0" action="/list">
+            <input class="form-control mr-sm-2" type="search" name="title" id="title" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+            <a class="btn btn-outline-danger" href="/logout" >Logout</a>
+        </form>
+    </div>
+</nav>
+
+
